@@ -45,7 +45,7 @@ FROM
 	WHERE term = 'world');*/
 	
 
-SELECT a.row_num, b.col_num, SUM(a.value*b.value)
+SELECT *
 FROM a AS a,b AS b;
 
 
