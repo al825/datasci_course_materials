@@ -34,11 +34,11 @@ FROM
 	 HAVING sums>300);*/
 	 
 
-SELECT docid
-FROM frequency
-WHERE term = 'transactions'
-INTERSECT
-SELECT docid
-FROM frequency
-WHERE term = 'world';
+SELECT *
+	FROM frequency
+	WHERE term ='transactions'
+	INTERSECT
+	SELECT *
+	FROM frequency
+	WHERE term ='world';
 
