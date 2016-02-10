@@ -46,6 +46,7 @@ FROM
 	
 
 SELECT *
-FROM a,b
+FROM a AS a,b AS b
 WHERE a.row=b.col;
+
 
