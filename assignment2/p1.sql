@@ -16,11 +16,17 @@ WHERE docid='925_txt_trade' AND count=1;
 
 SELECT term
 FROM frequency
-WHERE docid IN ('10398_txt_earn', '925_txt_trade') AND count=1;*/
+WHERE docid IN ('10398_txt_earn', '925_txt_trade') AND count=1;
 
 SELECT COUNT(*)
 FROM 
 	(SELECT docid, COUNT (*)
 	 FROM frequency
 	 WHERE term LIKE '%parliament%'
-	 GROUP BY docid);
+	 GROUP BY docid);*/
+	 
+
+SELECT docid sum(count) AS sums
+FROM frequency
+GROUP BY docid
+HAVING sums>300;
