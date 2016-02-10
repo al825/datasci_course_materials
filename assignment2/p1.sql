@@ -34,11 +34,13 @@ FROM
 	 HAVING sums>300);*/
 	 
 
-SELECT *
+SELECT COUNT(DISTINCT docid)
+FROM
+	(SELECT *
 	FROM frequency
-	WHERE term ='transactions'
+	WHERE term = 'transactions'
 	INTERSECT
 	SELECT *
 	FROM frequency
-	WHERE term ='world';
+	WHERE term = 'world');
 
