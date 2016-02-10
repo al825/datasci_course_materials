@@ -46,7 +46,7 @@ FROM
 	
 
 SELECT a.row_num, b.col_num, SUM(a.value*b.value)
-FROM a AS a,b AS b
+FROM a AS a,b AS b;
 
 
 
