@@ -47,7 +47,7 @@ FROM
 
 SELECT *
 FROM a AS a,b AS b
-WHERE a.row_num=b.col_num AND a.col_num=b.row_num;
+WHERE a.col_num=b.row_num;
 
 
 
