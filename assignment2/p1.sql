@@ -23,7 +23,7 @@ FROM
 	(SELECT docid, COUNT (*)
 	 FROM frequency
 	 WHERE term LIKE '%parliament%'
-	 GROUP BY docid);*/
+	 GROUP BY docid);
 	 
 
 SELECT docid
@@ -31,4 +31,9 @@ FROM
 	 (SELECT docid, sum(count) AS sums
 	 FROM frequency
 	 GROUP BY docid
-	 HAVING sums>300);
+	 HAVING sums>300);*/
+	 
+
+SELECT COUNT(DINSTINCT docid)
+FROM frequency
+WHERE terms IN ('transactions', 'world');
