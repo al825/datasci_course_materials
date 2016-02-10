@@ -26,7 +26,9 @@ FROM
 	 GROUP BY docid);*/
 	 
 
-SELECT docid, sum(count) AS sums
-FROM frequency
-GROUP BY docid
-HAVING sums>300;
+SELECT docid
+FROM 
+	 (SELECT docid, sum(count) AS sums
+	 FROM frequency
+	 GROUP BY docid
+	 HAVING sums>300);
