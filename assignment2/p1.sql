@@ -36,4 +36,4 @@ FROM
 
 SELECT COUNT(DISTINCT docid)
 FROM frequency
-WHERE terms IN ('transactions', 'world');
+WHERE term IN ('transactions', 'world');
