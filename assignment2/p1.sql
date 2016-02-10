@@ -47,8 +47,7 @@ FROM
 
 SELECT a.row_num, b.col_num, SUM(a.value*b.value)
 FROM a AS a,b AS b
-WHERE a.row_num=b.col_num AND a.col_num=b.row_num
-GROUP BY a.row_num, b.col_num;
+
 
 
 
