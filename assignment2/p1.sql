@@ -34,6 +34,6 @@ FROM
 	 HAVING sums>300);*/
 	 
 
-SELECT COUNT(DINSTINCT docid)
+SELECT COUNT(DISTINCT docid)
 FROM frequency
 WHERE terms IN ('transactions', 'world');
