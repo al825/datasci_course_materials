@@ -35,5 +35,11 @@ FROM
 	 
 
 SELECT COUNT(DISTINCT docid)
-FROM frequency
-WHERE term IN ('transactions', 'world');
+FROM
+	(FROM frequency
+	WHERE term ='transactions'
+	INTERSECT
+	SELECT *
+	FROM frequency
+	WHERE term ='world');
+
