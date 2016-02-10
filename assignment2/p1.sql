@@ -31,7 +31,7 @@ FROM
 	 (SELECT docid, sum(count) AS sums
 	 FROM frequency
 	 GROUP BY docid
-	 HAVING sums>300);*/
+	 HAVING sums>300);
 	 
 
 SELECT COUNT(DISTINCT docid)
@@ -42,5 +42,10 @@ FROM
 	INTERSECT
 	SELECT docid
 	FROM frequency
-	WHERE term = 'world');
+	WHERE term = 'world');*/
+	
+
+SELECT *
+FROM a,b
+WHERE a.row=b.col;
 
