@@ -36,7 +36,8 @@ FROM
 
 SELECT COUNT(DISTINCT docid)
 FROM
-	(FROM frequency
+	(SELECT *
+	FROM frequency
 	WHERE term ='transactions'
 	INTERSECT
 	SELECT *
