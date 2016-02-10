@@ -47,6 +47,5 @@ FROM
 
 SELECT *
 FROM a AS a,b AS b
-WHERE a.row=b.col;
-
+WHERE a.row_num=b.col_num;
 
