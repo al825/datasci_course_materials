@@ -54,7 +54,7 @@ GROUP BY a.row_num, b.col_num;*/
 
 SELECT a.docid, b.docid, SUM(a.count*b.count)
 FROM frequency AS a, frequency AS b
-WHERE a.docid=b.docid AND a.term=b.term AND a.docid < b.docid
+WHERE a.docid=b.docid AND a.docid < b.docid
 GROUP BY a.docid, b.docid; 
 
 
