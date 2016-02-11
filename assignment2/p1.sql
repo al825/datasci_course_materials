@@ -71,7 +71,7 @@ SELECT 'q' as docid, 'washington' as term, 1 as count
 UNION
 SELECT 'q' as docid, 'taxes' as term, 1 as count;
 
-SELECT d.docid, SUM(a.count*b.count)
+SELECT b.docid, SUM(a.count*b.count)
 FROM temp AS a, temp AS b
 WHERE temp.term=temp.term AND a.docid='q'
 GROUP BY b.docid;
