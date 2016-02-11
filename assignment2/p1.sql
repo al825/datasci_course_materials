@@ -60,7 +60,7 @@ GROUP BY a.docid, b.docid; */
 
 SELECT *
 FROM frequency
-WHERE a.docid ='9809_txt_acq';
+WHERE docid ='9809_txt_acq';
 
 
 
