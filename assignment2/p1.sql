@@ -42,21 +42,21 @@ FROM
 	INTERSECT
 	SELECT docid
 	FROM frequency
-	WHERE term = 'world');*/
+	WHERE term = 'world');
 	
 
 SELECT a.row_num,b.col_num, SUM(a.value*b.value)
 FROM a AS a,b AS b
 WHERE a.col_num=b.row_num
-GROUP BY a.row_num, b.col_num;
+GROUP BY a.row_num, b.col_num;*/
 
 
 
 
-/*SELECT a.docid, b.docid, SUM(a.count*b.count)
+SELECT a.docid, b.docid, SUM(a.count*b.count)
 FROM frequency AS a, frequency AS b
-WHERE a.docid=b.docid AND a.docid < b.docid
-GROUP BY a.docid, b.docid; */
+WHERE a.term=b.term AND a.docid < b.docid
+GROUP BY a.docid, b.docid; 
 
 
 
