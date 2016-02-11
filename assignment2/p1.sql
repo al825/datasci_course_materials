@@ -69,16 +69,14 @@ FROM frequency
 UNION
 SELECT 'q' as docid, 'washington' as term, 1 as count
 UNION
-SELECT 'q' as docid, 'taxes' as term, 1 as count;
+SELECT 'q' as docid, 'taxes' as term, 1 as count;*/
 
 SELECT b.docid, SUM(a.count*b.count)
 FROM temp AS a, temp AS b
-WHERE temp.term=temp.term AND a.docid='q'
-GROUP BY b.docid;*/
+WHERE a.term=b.term AND a.docid='q'
+GROUP BY b.docid;
 
-SELECT term
-FROM temp
-WHERE docid='q';
+
 
 
 
