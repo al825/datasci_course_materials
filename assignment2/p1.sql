@@ -63,7 +63,7 @@ GROUP BY a.docid, b.docid;*/
 
 
 
-CREATE VIEW temp AS 
+/*CREATE VIEW temp AS 
 SELECT * 
 FROM frequency
 UNION
@@ -74,7 +74,11 @@ SELECT 'q' as docid, 'taxes' as term, 1 as count;
 SELECT b.docid, SUM(a.count*b.count)
 FROM temp AS a, temp AS b
 WHERE temp.term=temp.term AND a.docid='q'
-GROUP BY b.docid;
+GROUP BY b.docid;*/
+
+SELECT *
+FROM temp
+WHERE docid='q';
 
 
 
