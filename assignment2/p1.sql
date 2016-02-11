@@ -53,7 +53,7 @@ GROUP BY a.row_num, b.col_num;*/
 
 
 
-SELECT a.docid, b.docid, a.term, b.term
+SELECT a.docid, b.docid, a.term, b.term, a.count, b.count
 FROM frequency AS a, frequency AS b
 WHERE a.term=b.term AND a.docid ='9809_txt_acq' AND b.docid ='9810_txt_earn';
 
