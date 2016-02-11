@@ -48,7 +48,7 @@ FROM
 SELECT a.row_num,b.col_num, SUM(a.value*b.value)
 FROM a AS a,b AS b
 WHERE a.col_num=b.row_num
-GROUP BY a.row_num, b.col_num;*/
+GROUP BY a.row_num, b.col_num;
 
 
 
@@ -56,7 +56,12 @@ GROUP BY a.row_num, b.col_num;*/
 SELECT a.docid, b.docid, a.term, b.term
 FROM frequency AS a, frequency AS b
 WHERE a.term=b.term AND a.docid ='9809_txt_acq' AND b.docid ='9810_txt_earn'
-GROUP BY a.docid, b.docid; 
+GROUP BY a.docid, b.docid; */
+
+SELECT *
+FROM frequency
+WHERE a.docid ='9809_txt_acq';
+
 
 
 /*CREATE VIEW temp AS 
