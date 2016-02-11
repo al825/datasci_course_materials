@@ -76,7 +76,7 @@ FROM temp AS a, temp AS b
 WHERE temp.term=temp.term AND a.docid='q'
 GROUP BY b.docid;*/
 
-SELECT *
+SELECT term
 FROM temp
 WHERE docid='q';
 
